@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="num_layout_width">80dip</dimen>
+    <dimen name="num_layout_padding">80dip</dimen>
+    <dimen name="num_layout_padding_b">100dip</dimen>
+    <dimen name="num_layout_padding_t">30dip</dimen>
+
+    <dimen name="flash_light_padding">10dip</dimen>
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/doneLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ringColor"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/doneImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/clean_notify_result_ok"/>
+
+    <LinearLayout
+        android:id="@+id/doneLay_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/doneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cpu_cooling_doing"
+            android:textColor="@color/white_e"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/doneTextTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/cpu_cooling_"
+            android:textColor="@color/white_e"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 中间的背景色 -->
+    <gradient
+        android:angle="45"
+        android:endColor="@color/base_bottom_text"
+        android:startColor="@color/base_bottom_text66"/>
+
+    <!-- 设置四个角的角度 -->
+    <corners
+        android:bottomLeftRadius="500dp"
+        android:bottomRightRadius="500dp"
+        android:topLeftRadius="500dp"
+        android:topRightRadius="500dp"/>
+
+</shape>

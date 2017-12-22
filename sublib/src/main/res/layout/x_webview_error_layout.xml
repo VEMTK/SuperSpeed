@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/error_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:id="@+id/error_msg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="3dp"-->
+        <!--android:text="Load Fail,Please Check NetWork"-->
+        <!--android:textColor="#88000000"-->
+        <!--android:textSize="18sp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/click_screen_load"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="3dp"-->
+        <!--android:text="@string/load_error"-->
+        <!--android:textColor="#55000000"-->
+        <!--android:textSize="18sp"/>-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/x_loadfail_icon"/>
+
+
+</LinearLayout>

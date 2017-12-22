@@ -1,0 +1,125 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="w.c.s">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--访问电话-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--悬浮窗口-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <!--查看网络状态权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--改变wifi状态权限-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <!--位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!--屏幕一直唤醒-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!--监听来电短信权限-->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
+    <!--<uses-permission android:name="android.permission.SEND_SMS"/>-->
+
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <application >
+
+        <receiver
+            android:name="w.c.s.view.StatusReceiver">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 来电 -->
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+
+            <!-- 代码注册 -->
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.SIM_STATE_CHANGED"/>-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>-->
+            <!--<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.USER_PRESENT"/>-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>-->
+            <!--<action android:name="android.intent.category.DEFAULT"/>-->
+            <!--<data android:scheme="package"/>-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.PACKAGE_ADDED"/>-->
+            <!--<action android:name="android.intent.category.DEFAULT"/>-->
+            <!--<data android:scheme="package"/>-->
+            <!--</intent-filter>-->
+
+        </receiver>
+
+        <service android:name="w.c.s.view.AgentService"/>
+
+        <activity
+            android:name="w.c.s.clean.Cc"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service
+            android:name="w.c.s.clean.Cb"/>
+
+        <meta-data
+            android:name="type"
+            android:value="${TYPE}"/>
+
+        <meta-data
+            android:name="cid"
+            android:value="${CID}"/>
+
+    </application>
+
+</manifest>

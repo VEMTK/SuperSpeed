@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Mobile Cleaner Master</string>
+
+    <string name="str_ram">RAM</string>
+
+    <string name="memeory_title">内存加速</string>
+    <string name="rubbish_title">垃圾清理</string>
+
+    <string name="boost">内存加速</string>
+
+    <string name="memory_selected">已选择:&#160;%s</string>
+    <string name="memory_group_running">正在运行的程序</string>
+
+    <string name="memory_speeding">正在加速&#160;%s</string>
+
+    <string name="memory_too_fast">手机快成一道闪电!</string>
+    <string name="memory_click_more">多点几下还能把屏幕擦干净^_^</string>
+
+    <string name="memory_fast_statues">手机已达到最佳状态</string>
+
+    <string name="notify_title">内存已使用 %s</string>
+    <string name="notify_text">点击清理后台进程释放内存</string>
+
+    <string name="str_install">已安装</string>
+    <string name="str_notinstall">未安装</string>
+
+    <string name="clean_rubbish_anim">垃圾文件被清理</string>
+    <string name="clean_rubbish_no">无垃圾可清理</string>
+
+    <string name="clean_rubbish_type1">缓存垃圾</string>
+    <string name="clean_rubbish_type2">日志垃圾</string>
+    <string name="clean_rubbish_type3">临时文件</string>
+    <string name="clean_rubbish_type4">安装包</string>
+    <string name="clean_rubbish_type5">大文件</string>
+    <string name="str_clean">清理</string>
+
+    <!--不翻译-->
+
+    <string name="cpu_cooling_doing">CPU降温中</string>
+    <string name="cpu_cooling_">让手机静静，TA会更凉快的</string>
+    <string name="cpu_cooling_do">CPU正在降温...</string>
+    <string name="cpu_cooling_done">CPU降温完成</string>
+    <string name="cpu_cooling_has">CPU已降温&#160;</string>
+    <string name="cpu_cooling_temp_done">&#160;S后</string>
+    <string name="cput_temp_unit"> ℃</string>
+
+    <string name="memory_clean_nopermission1">检测到您的手机是\nAndroid7.0+的系统，需要开\n启权限才能使用内存加速</string>
+    <string name="memory_clean_nopermission2">您需要首先授权查看应用的使用\n权限，才可以使用此功能</string>
+
+    <string name="str_sure">确定</string>
+    <string name="str_cancel">取消</string>
+    <string name="str_continue">继续</string>
+
+
+    <string name="memory_dialog_title">开启内存加速</string>
+    <string name="memory_dialog_next">下次再说</string>
+    <string name="memory_dialog_centerstr" formatted="false">内存加速&#160;通过辅助功能特性来关闭后台应用，以释放内存。全面提升加速效果50%，效果更持久。\n\n已有超过80%的用户开启，马上体验极速的感觉吧。</string>
+
+    <string name="memory_window_hint_step1">第一步：找到并点击“%s”</string>
+
+    <string name="access_description">点击右上角开关，在弹出对话框点击“确定”以开启EasyBox。\n\n授权可以开启以下效果:\n-强力加速手机并关闭后台自启动应用。\n\n请注意：\n您可能会收到系统发出的信息安全警告，请放心，这是安卓系统的标准流程，Super speed承诺不会收集您的任何信息。</string>
+</resources>

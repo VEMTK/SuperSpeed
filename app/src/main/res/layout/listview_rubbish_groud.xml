@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_e"
+                android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/rubbish_group_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/rubbish_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="marquee"
+            android:scaleType="centerCrop"
+            android:text="换成你垃圾"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/rubbish_group_direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/junk_group_arrow_up"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/rubbish_group_checkLay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/rubbish_group_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center|right"
+                android:paddingRight="10dp"
+                android:scaleType="centerCrop"
+                android:text="12.5 MB"
+                android:textColor="@color/text_alpha_black"/>
+
+            <ImageView
+                android:id="@+id/rubbish_group_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/memory_selector"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingLeft="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_00"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/rubbish_chid_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/rubbish_chid_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:scaleType="centerCrop"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+
+        <LinearLayout
+            android:id="@+id/rubbish_child_checkLay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:gravity="center|right"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/rubbish_child_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="12.0 KB"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/rubbish_chlid_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:src="@drawable/memory_selector"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_lock_divider"/>
+
+</LinearLayout>

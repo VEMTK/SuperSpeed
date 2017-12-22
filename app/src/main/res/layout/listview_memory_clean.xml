@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/back_click_black"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingBottom="5dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size">
+
+        <ImageView
+            android:id="@+id/memory_chid_icon"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"/>
+
+        <TextView
+            android:id="@+id/memory_child_iconTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="150℃"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/memory_chid_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:lines="1"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:singleLine="true"
+        android:text="我是测试文字"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/memory_child_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="12.0 MB"/>
+
+    <LinearLayout
+        android:id="@+id/memory_child_checkLay"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/memory_child_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/memory_selector"/>
+    </LinearLayout>
+
+</LinearLayout>

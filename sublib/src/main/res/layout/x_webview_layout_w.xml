@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ProgressBar
+            android:id="@+id/webView_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="0.5dp"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.webkit.WebView
+                    android:id="@+id/grid_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <include
+                    layout="@layout/x_webview_error_layout"
+                    android:visibility="gone"/>
+
+                <FrameLayout
+                    android:id="@+id/x_dialog_progress"
+                    android:layout_width="35.0dp"
+                    android:layout_height="35.0dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/x_round_rect_bg"
+                    android:padding="2dp">
+
+                    <ProgressBar
+                        android:id="@+id/x_progressbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:indeterminateBehavior="repeat"
+                        android:indeterminateDrawable="@drawable/x_progress_style"/>
+
+                    <TextView
+                        android:id="@+id/x_dialog_progress_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#303f9f"
+                        android:textSize="10sp"/>
+
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/delete_view"
+        android:layout_width="30.0dp"
+        android:layout_height="30.0dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:src="@drawable/x_cancel_w"
+        />
+</FrameLayout>

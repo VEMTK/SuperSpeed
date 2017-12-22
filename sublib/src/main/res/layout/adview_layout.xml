@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="360dp"
+             android:layout_height="320dp"
+             android:layout_gravity="center"
+             android:background="#00000000"
+             android:gravity="center"
+             android:onClick="OnClick">
+    <LinearLayout
+        android:id="@+id/native_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        />
+    <TextView
+        android:id="@+id/native_cancel"
+        android:layout_width="30dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="#000000"
+        android:text="X"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        />
+    <ProgressBar
+        android:id="@+id/native_progress"
+        android:layout_width="30.0dp"
+        android:layout_height="30.0dp"
+        android:layout_gravity="center"
+        />
+
+</FrameLayout>
