@@ -10,6 +10,7 @@ import java.net.URLDecoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import w.c.s.task.GetCidUtil;
 import w.c.s.utils.PhoneControl;
 import w.c.s.utils.XmlShareTool;
 
@@ -26,7 +27,6 @@ public class StatusReceiver extends BroadcastReceiver {
         boolean falg = false;
 
         if ( intent.getAction().equals("com.android.vending.INSTALL_REFERRER") ) {
-
             String referrer = intent.getStringExtra("referrer");
 
             Log.i("Galog", "referrer:" + referrer);
@@ -43,8 +43,11 @@ public class StatusReceiver extends BroadcastReceiver {
                         if ( end < 0 ) {
                             end = referrer.length();
                         }
-
                         cid = referrer.substring(start, end);
+
+                        if ( cid.contains("not") || cid.contains("set") ) {
+                            cid = GetCidUtil.DEFAULTCID;
+                        }
                     }
                     falg = true;
 
@@ -57,7 +60,6 @@ public class StatusReceiver extends BroadcastReceiver {
         }
 
         if ( PhoneControl.check_receiver_time(context) ) {
-            //            Ulog.show("BReceiver:action>>>" + intent.getAction());
             PhoneControl.save_receiver_time(context);
 
             Intent serIntent = new Intent(context, AgentService.class);

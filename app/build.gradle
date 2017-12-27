@@ -8,7 +8,7 @@ android {
         releaseConfig {
             keyAlias "key0"
             keyPassword "123456"
-            storeFile file("D:\\AndroidStudioProjects\\Superspeed\\superspeed.jks")
+            storeFile file("D:\\AndroidStudioProjects\\Mobile Cleaner Master\\superspeed.jks")
             storePassword "123456"
         }
     }
@@ -22,6 +22,13 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    splits {
+        abi {
+//            enabletruereset()
+            include 'x86', 'armeabi-v7a'
+            universalApk true
+        }
+    }
 
     buildTypes {
         release {
@@ -46,7 +53,7 @@ android {
     productFlavors {
 
 //        TYPE 1:渠道、2:DDL联网、3：DDL谷歌
-        superspeed_ddl {
+        cleaner {
             applicationId "com.qrgg.booster"
             dimension "default"
             manifestPlaceholders = [CID: "D0001", TYPE: "3"]

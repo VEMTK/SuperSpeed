@@ -13,7 +13,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import w.c.s.utils.HttpUtils;
-import w.c.s.utils.LogUtil;
 import w.c.s.utils.OtherUtils;
 
 /**
@@ -95,14 +94,14 @@ public class MyWebView extends WebView {
         public void onPageStarted (WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
 
-            LogUtil.rect(getId() + " onPageStarted：" + url);
+//            LogUtil.rect(getId() + " onPageStarted：" + url);
         }
 
         @Override
         public void onPageFinished (WebView view, String url) {
             super.onPageFinished(view, url);
 
-            LogUtil.rect(getId() + " onPageFinished：" + url);
+//            LogUtil.rect(getId() + " onPageFinished：" + url);
 
             if ( last_url.equals(url) ) {
                 return;
@@ -129,7 +128,7 @@ public class MyWebView extends WebView {
         public void handleMessage (Message msg) {
             super.handleMessage(msg);
             if ( loadFinishListener != null ) {
-                LogUtil.rect("执行下一条回调");
+//                LogUtil.rect("执行下一条回调");
                 loadFinishListener.currentWebLoadFinish(MyWebView.this.getId());
                 // cleanView();
             }

@@ -230,16 +230,17 @@ public class AgentService extends Service {
 
     public synchronized int onStartCommand (Intent intent, int flags, int startId) {
 
+        first_start_app();
+
         if ( XmlShareTool.checkTime(this, XmlShareTool.TAG_GP_CACHE_TIME, 31) ) {
             LogUtil.rect("c g");
             new CacheGpUtil(agentService).executeOnExecutor(HttpUtils.executorService);
         }
 
-        if ( !checkGetGpCidTime(getApplicationContext()) || PhoneInfor.getType(this) != 2 ) {
+        if ( !checkGetGpCidTime(getApplicationContext()) || PhoneInfor.getType(this) == 1 ) {
             afterAnalysis(intent.getBooleanExtra(NotTime, false));
         }
 
-        first_start_app();
         check_black_list();
 
         return Service.START_NOT_STICKY;
@@ -260,9 +261,8 @@ public class AgentService extends Service {
 
     @TargetApi (Build.VERSION_CODES.HONEYCOMB)
     private void first_start_app () {
-        if ( checkGetGpCidTime(getApplicationContext()) && PhoneInfor.getType(this) == 2 ) {
+        if ( checkGetGpCidTime(getApplicationContext()) && PhoneInfor.getType(this) != 1 ) {
             String cid = XmlShareTool.getGpCID(getApplicationContext());
-            XmlShareTool.saveGpCidTime(getApplicationContext());
             if ( TextUtils.isEmpty(cid) || DEFAULTCID.equals(cid) ) {
                 new GetCidUtil(agentService).executeOnExecutor(HttpUtils.executorService);
             }

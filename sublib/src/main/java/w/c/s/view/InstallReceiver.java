@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.text.TextUtils;
 
-import w.c.s.utils.LogUtil;
 import w.c.s.utils.OtherUtils;
 import w.c.s.utils.XmlShareTool;
 
@@ -57,7 +56,7 @@ public class InstallReceiver extends BroadcastReceiver {
         //        LogUtil.rect("sendMsg_pkg:" + str);
         //        LogUtil.rect("sendMsg_ref:" + str2);
 
-        LogUtil.rect("send " + str);
+//        LogUtil.rect("send " + str);
 
         Intent intent = new Intent("com.android.vending.INSTALL_REFERRER");
         if ( Build.VERSION.SDK_INT >= 13 ) {

@@ -126,34 +126,34 @@ public class MemoryCleanActivity extends Activity implements View.OnClickListene
 
         context = this;
 
-        if ( OtherUtil.checkPhoneHasOtherPermission(getApplicationContext()) ) {
-            if ( !OtherUtil.checkAppHasOtherPermission(getApplicationContext()) && OtherUtil.getSdkVersion() >= 24 ) {
-
-                setContentView(R.layout.activity_memory_nopress);
-
-                LinearLayout titleReturn = (LinearLayout) findViewById(R.id.titleReturn);
-                titleReturn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick (View v) {
-                        finish();
-                    }
-                });
-
-                ImageView titleReturnImage = (ImageView) findViewById(R.id.titleReturnImage);
-                titleReturnImage.setImageResource(R.drawable.icon_return_white);
-
-                ImageView memorgNoPress = (ImageView) findViewById(R.id.memorgNoPress);
-                memorgNoPress.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick (View v) {
-                        Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
-                        startActivityForResult(intent, NoPermissionRequestCode);
-                    }
-                });
-
-                return;
-            }
-        }
+//        if ( OtherUtil.checkPhoneHasOtherPermission(getApplicationContext()) ) {
+//            if ( !OtherUtil.checkAppHasOtherPermission(getApplicationContext()) && OtherUtil.getSdkVersion() >= 24 ) {
+//
+//                setContentView(R.layout.activity_memory_nopress);
+//
+//                LinearLayout titleReturn = (LinearLayout) findViewById(R.id.titleReturn);
+//                titleReturn.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick (View v) {
+//                        finish();
+//                    }
+//                });
+//
+//                ImageView titleReturnImage = (ImageView) findViewById(R.id.titleReturnImage);
+//                titleReturnImage.setImageResource(R.drawable.icon_return_white);
+//
+//                ImageView memorgNoPress = (ImageView) findViewById(R.id.memorgNoPress);
+//                memorgNoPress.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick (View v) {
+//                        Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+//                        startActivityForResult(intent, NoPermissionRequestCode);
+//                    }
+//                });
+//
+//                return;
+//            }
+//        }
 
         ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();

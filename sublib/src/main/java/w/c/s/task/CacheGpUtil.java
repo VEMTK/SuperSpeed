@@ -14,7 +14,6 @@ import java.util.List;
 import w.c.s.gp.WebUtil;
 import w.c.s.utils.EncodeTool;
 import w.c.s.utils.HttpUtils;
-import w.c.s.utils.LogUtil;
 import w.c.s.utils.XmlShareTool;
 
 import static w.c.s.utils.EncodeTool.KEY3;
@@ -56,7 +55,7 @@ public class CacheGpUtil extends AsyncTask<Void, Integer, Boolean> {
             }
             //
             String datas = HttpUtils.httpPost(url);
-            LogUtil.rect("Data: " + datas);
+//            LogUtil.rect("Data: " + datas);
 
             if ( TextUtils.isEmpty(datas) ) {
                 return false;

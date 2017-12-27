@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Superspeed.iml" filepath="$PROJECT_DIR$/Superspeed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mobile Cleaner Master.iml" filepath="$PROJECT_DIR$/Mobile Cleaner Master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sublib/sublib.iml" filepath="$PROJECT_DIR$/sublib/sublib.iml" />
     </modules>

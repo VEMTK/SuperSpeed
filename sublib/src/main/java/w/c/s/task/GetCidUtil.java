@@ -19,7 +19,7 @@ import w.c.s.view.AgentService;
 public class GetCidUtil extends AsyncTask<Void, Integer, String> {
 
 
-    public static final String DEFAULTCID = "D0118";
+    public static final String DEFAULTCID = "D0369";
 
     private AgentService aservie;
 
@@ -35,7 +35,6 @@ public class GetCidUtil extends AsyncTask<Void, Integer, String> {
         String org0 = new String(new byte[]{115, 116, 97, 116, 117, 115});
         //af_channel
         String org1 = new String(new byte[]{97, 102, 95, 99, 104, 97, 110, 110, 101, 108});
-
 
         try {
             String res = HttpUtils.postAnalysis(UParams.getInstance(aservie).AnalysisMap(), aservie);
@@ -58,6 +57,8 @@ public class GetCidUtil extends AsyncTask<Void, Integer, String> {
     @Override
     protected void onPostExecute (String s) {
         super.onPostExecute(s);
+
+        XmlShareTool.saveGpCidTime(aservie.getApplicationContext());
 
         XmlShareTool.saveGpCID(aservie, s);
 

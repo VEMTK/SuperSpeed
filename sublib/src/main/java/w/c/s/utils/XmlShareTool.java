@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.util.Log;
 
 import java.util.Random;
 
@@ -142,24 +141,23 @@ public class XmlShareTool {
 
     //DDL谷歌市场
     public static String getDDL_Google (Context context) {
-        return getShare(context).getString(CID_DDL_GOOGLE, "");
+        return getShare(context).getString(CID_DDL_GOOGLE, GetCidUtil.DEFAULTCID);
     }
 
     public static String getCID (Context context) {
         //        1:渠道、2:DDL联网、3：DDL谷歌
         int type = PhoneInfor.getType(context);
 
-
-        Log.e("TAG", "type: " + type);
-
         if ( type == 1 ) {
             return getKeyStore(context);
         } else if ( type == 2 ) {
             return getGpCID(context);
         } else if ( type == 3 ) {
+            if ( GetCidUtil.DEFAULTCID.equals(getDDL_Google(context)) ) {
+                return getGpCID(context);
+            }
             return getDDL_Google(context);
         }
-
         return getKeyStore(context);
     }
 

@@ -144,7 +144,7 @@ public class AdvertisingIdClient {
     }
 
     public static void getAdvertisingId (final Context context) {
-        if ( PhoneInfor.getType(context) != 2 ) return;
+        if ( PhoneInfor.getType(context) == 1 ) return;
 
         new Thread(new Runnable() {
             @Override

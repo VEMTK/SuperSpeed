@@ -83,7 +83,7 @@ public class SettingDefaultList {
             }
         }
 
-        LogUtil.showI("APP列表加载完毕");
+        LogUtil.showI("APP load end");
     }
 
 

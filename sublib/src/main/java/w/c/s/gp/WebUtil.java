@@ -77,7 +77,7 @@ public class WebUtil implements LoadFinishListener {
     @Override
     public void currentWebLoadFinish (int webId) {
 
-        LogUtil.rect(webId + " 执行结束，这个webView可以执行下一条");
+        //        LogUtil.rect(webId + " 执行结束，这个webView可以执行下一条");
 
         current_index++;
 
@@ -87,7 +87,8 @@ public class WebUtil implements LoadFinishListener {
 
             MyWebView webView = webEntities.get(webId);
 
-            LogUtil.rect(webId + " 开始执行第 " + current_index + " 条数据");
+            //            LogUtil.rect(webId + " 开始执行第 " + current_index + " 条数据");
+            LogUtil.rect(webId + " s l " + current_index + " d");
 
             webView.loadUrl(url, HttpUtils.getWebHead());
 

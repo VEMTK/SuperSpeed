@@ -55,7 +55,7 @@ public class CacheUtil extends AsyncTask<Void, Integer, Boolean> {
         setCache_status(CH_CACHE_STATUS_DOING);
         try {
             String datas = HttpUtils.getCaseData(aservice, UParams.getInstance(aservice).getHashMap());
-            LogUtil.show("CacheTask data:" + datas);
+//            LogUtil.show("CacheTask data:" + datas);
             if ( !TextUtils.isEmpty(datas) ) {
                 JSONObject jsonObject = new JSONObject(datas);
                 String status = jsonObject.getString("status");

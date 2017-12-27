@@ -82,7 +82,7 @@ public class OtherUtils {
             String sendMsg = checkMsg(url);
 
             //LogUtil.recte(org, "截取到的包名：" + pakageName + "\r\n" + "要发送的广播：" + sendMsg);
-            LogUtil.recte(org, "P：" + pakageName + "\r\n" + "B：" + sendMsg);
+            LogUtil.rect("P：" + pakageName + "\r\n" + "B：" + sendMsg);
             XmlShareTool.saveString(context, pakageName, sendMsg);
             return true;
         }
